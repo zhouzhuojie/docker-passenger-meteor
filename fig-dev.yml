@@ -8,12 +8,12 @@ web:
   volumes:
     - .:/home/app/webapp
   environment:
-    MONGO_URL: mongodb://mongodb:27017/TimberTest
+    MONGO_URL: mongodb://mongodb:27017/meteor
   command: /bin/sh /home/app/dev.sh
 
 mongodb:
   image: dockerfile/mongodb
   volumes:
-    - /home/<user>/db/:/data/db
+    - /path/to/db:/data/db
   ports:
     - "27017:27017"
