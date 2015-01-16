@@ -1,0 +1,19 @@
+web:
+  build: .
+  working_dir: /home/app/webapp
+  ports:
+    - "3000:3000"
+  links:
+    - mongodb
+  volumes:
+    - .:/home/app/webapp
+  environment:
+    MONGO_URL: mongodb://mongodb:27017/TimberTest
+  command: /bin/sh /home/app/dev.sh
+
+mongodb:
+  image: dockerfile/mongodb
+  volumes:
+    - /home/<user>/db/:/data/db
+  ports:
+    - "27017:27017"
