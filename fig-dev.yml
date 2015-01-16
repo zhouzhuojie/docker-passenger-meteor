@@ -1,5 +1,5 @@
 web:
-  build: .
+  image: zhouzhuojie/docker-passenger-meteor
   working_dir: /home/app/webapp
   ports:
     - "3000:3000"
