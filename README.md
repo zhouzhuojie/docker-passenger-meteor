@@ -13,7 +13,6 @@ Docker Image for Meteor production and development. Using **Meteor+Passenger+Fig
     - Copy [fig.yml](https://raw.githubusercontent.com/zhouzhuojie/docker-passenger-meteor/master/fig.yml) file to the current folder *(insider webaap folder)*;
     - Remember to change the mongodb volume in the fig.yml file. `/path/to/db:/data/db`
     - `fig up` to start the services.
-
 - Warning
     - The fig.sh will remove `.meteor/local`, which means the default development local mongodb will be reset. We highly recommend to use the mongodb docker image instead (both are integrated in the `fig.yml` and `fig-dev.yml`). 
 
