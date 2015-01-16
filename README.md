@@ -4,13 +4,13 @@ Docker Image for Meteor production and development. Using **Meteor+Passenger+Fig
 
 ## Usage
 - Install Fig: [http://www.fig.sh/install.html](http://www.fig.sh/install.html);
-- Create a folder named **webapp** *(meteor create webapp)*; then `cd weapp`.
+- Create a folder named `webapp` *(meteor create webapp)*; then `cd weapp`.
 - Development
-    - Copy [fig-dev.yml](https://raw.githubusercontent.com/zhouzhuojie/docker-passenger-meteor/master/fig-dev.yml) file to the current folder *(insider webaap folder)*;
+    - Copy **[fig-dev.yml](https://raw.githubusercontent.com/zhouzhuojie/docker-passenger-meteor/master/fig-dev.yml)** file to the current folder *(insider webaap folder)*;
     - Remember to change the mongodb volume in the fig.yml file. `/path/to/db:/data/db`
     - `fig -f fig-dev.yml up` to start the services.
 - Production
-    - Copy [fig.yml](https://raw.githubusercontent.com/zhouzhuojie/docker-passenger-meteor/master/fig.yml) file to the current folder *(insider webaap folder)*;
+    - Copy **[fig.yml](https://raw.githubusercontent.com/zhouzhuojie/docker-passenger-meteor/master/fig.yml)** file to the current folder *(insider webaap folder)*;
     - Remember to change the mongodb volume in the fig.yml file. `/path/to/db:/data/db`
     - `fig up` to start the services.
 - Warning
