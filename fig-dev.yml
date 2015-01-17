@@ -5,15 +5,21 @@ web:
     - "3000:3000"
   links:
     - mongodb
-  volumes:
-    - .:/home/app/webapp
   environment:
     MONGO_URL: mongodb://mongodb:27017/meteor
+  volumes_from:
+    - webdata
   command: /bin/sh /home/app/dev.sh
 
 mongodb:
   image: dockerfile/mongodb
-  volumes:
-    - /path/to/db:/data/db
+  volumes_from:
+    - webdata
   ports:
     - "27017:27017"
+
+webdata:
+  image: busybox
+  volumes:
+    - /path/to/meteor-app:/home/app/webapp
+    - /path/to/db:/data/db
