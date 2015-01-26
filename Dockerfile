@@ -20,6 +20,5 @@ RUN curl https://install.meteor.com/ | sh
 # Clean up APT and /tmp when done
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 RUN sudo npm install -g phantomjs
-RUN sudo npm install -g weak
 ADD ./dev.sh /home/app/dev.sh
 ADD ./prod.sh /home/app/prod.sh
