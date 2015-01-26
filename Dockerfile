@@ -12,7 +12,7 @@ CMD ["/sbin/my_init"]
 
 # Install Node (last version, from node source repo)
 RUN curl -sL https://deb.nodesource.com/setup | sudo bash -
-RUN sudo apt-get install -y build-essential nodejs
+RUN sudo apt-get install -y build-essential nodejs python
 
 # Install Meteor
 RUN curl https://install.meteor.com/ | sh
